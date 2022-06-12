@@ -31,7 +31,7 @@ cd ffmpeg
 
 if [[ -z $FFMPEG_DOWNLOAD_URL ]]; then
   echo "Variable FFMPEG_DOWNLOAD_URL isn't set, using default value" | output
-  FFMPEG_DOWNLOAD_URL="https://github.com/davidpangrib001/heroku-buildpack-ffmpeg-latest/releases/download/Ffmpeg-Git-N6/ffmpeg-git-amd64-static.tar.xz"
+  FFMPEG_DOWNLOAD_URL="https://github.com/davidpangrib001/heroku-buildpack-ffmpeg-latest/releases/download/5.0.1/ffmpeg-release-amd64-static.tar.xz"
 fi
 
 echo "Downloading $FFMPEG_DOWNLOAD_URL" | output
@@ -56,4 +56,4 @@ PROFILE_PATH="$BUILD_DIR/.profile.d/ffmpeg.sh"
 mkdir -p $(dirname $PROFILE_PATH)
 echo 'export PATH="$PATH:${HOME}/vendor/ffmpeg"' >> $PROFILE_PATH
 
-echo "Installation successful" | output
+echo "Sukses Menginstall!" | output
