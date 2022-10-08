@@ -43,7 +43,7 @@ if [ "$code" != "200" ]; then
 fi
 
 echo "Setting Up FFmpeg . . ." | output
-echo "FFmpeg Version : 5.1.1"
+echo "FFmpeg Version : 5.1.1" | output
 
 tar xJf "./$FFMPEG_ARCHIVE_NAME" --strip-components=1
 
