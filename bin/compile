@@ -31,10 +31,10 @@ cd ffmpeg
 
 if [[ -z $FFMPEG_DOWNLOAD_URL ]]; then
   echo "Variable FFMPEG_DOWNLOAD_URL isn't set, using default value" | output
-  FFMPEG_DOWNLOAD_URL="https://github.com/davidpangrib001/heroku-buildpack-ffmpeg-latest/releases/download/Static-2020/ffmpeg-4.2.2-amd64-static.tar.xz"
+  FFMPEG_DOWNLOAD_URL="https://s.id/1kjlB"
 fi
 
-echo "Downloading $FFMPEG_DOWNLOAD_URL" | output
+echo "Downloading FFmpeg . . ." | output
 
 code=$(curl "$FFMPEG_DOWNLOAD_URL" -L --silent --fail --retry 5 --retry-max-time 15 -o ./$FFMPEG_ARCHIVE_NAME --write-out "%{http_code}")
 
@@ -42,7 +42,8 @@ if [ "$code" != "200" ]; then
   echo "Unable to download ffmpeg: $code" | output && exit 1
 fi
 
-echo "Unpacking the archive" | output
+echo "Setting Up FFmpeg . . ." | output
+echo "FFmpeg Version : 5.1.1"
 
 tar xJf "./$FFMPEG_ARCHIVE_NAME" --strip-components=1
 
