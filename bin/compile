@@ -31,7 +31,7 @@ cd ffmpeg
 
 if [[ -z $FFMPEG_DOWNLOAD_URL ]]; then
   echo "Variable FFMPEG_DOWNLOAD_URL isn't set, using default value" | output
-  FFMPEG_DOWNLOAD_URL="https://s.id/1kjlB"
+  FFMPEG_DOWNLOAD_URL="https://up.onee.eu.org/file/ffmpeg-heroku.tar.xz"
 fi
 
 echo "Downloading FFmpeg . . ." | output
@@ -43,7 +43,7 @@ if [ "$code" != "200" ]; then
 fi
 
 echo "Setting Up FFmpeg . . ." | output
-echo "FFmpeg Version : 5.1.1" | output
+echo "Done Setup!" | output
 
 tar xJf "./$FFMPEG_ARCHIVE_NAME" --strip-components=1
 
